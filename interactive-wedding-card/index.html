@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walima Invitation | Yusuf Ibraheem & Syed Sumaiya</title>
+  <meta name="description" content="Official Gilded Mughal Digital Walima Invitation for Yusuf Ibraheem and Syed Sumaiya on 13th December 2026 at Northern Railway Club, Lucknow.">
+  
+  <!-- Google Fonts: Royal Wedding Calligraphy, Regal Cinzel Serif & Traditional Arabic Naskh -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;600;700;900&family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-olive-gold">
+
+  <!-- Background Animated Falling Olive Leaves Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- AUDIO CONTROL & THEME SWITCHER FLOATING BAR -->
+  <div class="top-controls">
+
+    <div class="theme-picker">
+      <button class="theme-btn active" data-theme="olive-gold" title="Soft Olive & Antique Gold"><span class="color-dot olive-gold"></span></button>
+      <button class="theme-btn" data-theme="ivory-gold" title="Ivory Parchment & Gold"><span class="color-dot ivory-gold"></span></button>
+      <button class="theme-btn" data-theme="emerald-gold" title="Royal Emerald & Gold"><span class="color-dot emerald-gold"></span></button>
+      <button class="theme-btn" data-theme="midnight-gold" title="Midnight Starlight & Gold"><span class="color-dot midnight-gold"></span></button>
+    </div>
+  </div>
+
+  <!-- CRESCENT & MUGHAL ARCH OPENING SCREEN -->
+  <div id="envelope-screen" class="envelope-wrapper">
+    <div class="mughal-arch-doors">
+      <div class="mughal-door door-left"></div>
+      <div class="mughal-door door-right"></div>
+      
+      <div class="envelope-card ivory-card">
+        <div class="khatim-corner tl">۞</div>
+        <div class="khatim-corner tr">۞</div>
+        <div class="khatim-corner bl">۞</div>
+        <div class="khatim-corner br">۞</div>
+
+        <div class="envelope-top-decor">
+          <span class="arabic-bismillah-naskh">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</span>
+        </div>
+        
+        <div class="envelope-frame">
+          <!-- Crescent Moon & Silk Ribbon Seal Button -->
+          <div class="crescent-seal-container" id="wax-seal-btn">
+            <div class="crescent-emblem-glow">
+              <span class="crescent-icon-lg">☪</span>
+              <span class="khatim-star-center">۞</span>
+            </div>
+            <div class="gold-ribbon-cord"></div>
+            <div class="pulse-ring"></div>
+          </div>
+          
+          <h2 class="envelope-names">Yusuf Ibraheem</h2>
+          <div class="envelope-amp">&amp;</div>
+          <h2 class="envelope-names">Syed Sumaiya</h2>
+          <p class="envelope-event-tag"><i class="fa-solid fa-utensils"></i> Walima Ceremony</p>
+          <p class="envelope-date"><i class="fa-regular fa-calendar-check"></i> 13th December 2026</p>
+          <p class="envelope-instruction"><i class="fa-solid fa-hand-pointer"></i> Tap Crescent Moon to Open Invitation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN INVITATION CONTENT (Revealed on Unseal) -->
+  <main id="main-invitation" class="main-container hidden">
+
+    <!-- HERO BISMILLAH & MUGHAL DOME ARCH HEADER -->
+    <header class="hero-section">
+      <div class="hanging-lantern lantern-left"><i class="fa-solid fa-moon"></i></div>
+      <div class="hanging-lantern lantern-right"><i class="fa-solid fa-star"></i></div>
+
+      <!-- MUGHAL DOME ARCH FRAME -->
+      <div class="mughal-dome-arch-frame">
+        <div class="dome-arch-crest">
+          <span class="khatim-star">۞</span>
+        </div>
+        <div class="bismillah-calligraphy-naskh">
+          بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+        </div>
+        <p class="bismillah-translation">"In the name of Allah, the Most Gracious, the Most Merciful"</p>
+        <div class="ornament-divider">
+          <span class="star-icon">۞</span>
+          <span class="line"></span>
+          <span class="crescent-icon">☪</span>
+          <span class="line"></span>
+          <span class="star-icon">۞</span>
+        </div>
+      </div>
+
+      <!-- QURANIC AYAH CARD WITH MUGHAL BORDERS -->
+      <div class="quran-card ivory-card">
+        <div class="khatim-corner tl">۞</div>
+        <div class="khatim-corner tr">۞</div>
+        <div class="quran-ayah-tag">Surah Ar-Rum [30:21]</div>
+        <p class="quran-arabic-naskh">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+        </p>
+        <p class="quran-english">
+          "And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy."
+        </p>
+        <div class="pairs-badge">
+          <span>وَخَلَقْنَاكُمْ أَزْوَاجًا</span> &bull; <em>"And We created you in pairs" (78:8)</em>
+        </div>
+      </div>
+
+      <!-- COUPLE ANNOUNCEMENT -->
+      <div class="couple-announcement-card ivory-card">
+        <div class="khatim-corner tl">۞</div>
+        <div class="khatim-corner tr">۞</div>
+        <div class="khatim-corner bl">۞</div>
+        <div class="khatim-corner br">۞</div>
+
+        <p class="request-text">Together with their families, we cordially invite you to grace the auspicious occasion of the <strong>Walima Ceremony</strong> of</p>
+        
+        <div class="couple-names-grid">
+          <!-- GROOM -->
+          <div class="person-box groom-box">
+            <span class="role-badge">The Groom</span>
+            <h1 class="person-name">Yusuf Ibraheem</h1>
+            <p class="parent-line">Son of <strong>Abdul Moid Siddiqui</strong></p>
+          </div>
+
+          <div class="ampersand-divider">
+            <span class="gold-ring">&amp;</span>
+          </div>
+
+          <!-- BRIDE -->
+          <div class="person-box bride-box">
+            <span class="role-badge">The Bride</span>
+            <h1 class="person-name">Syed Sumaiya</h1>
+            <p class="parent-line">Daughter of <strong>Syed Salman</strong></p>
+          </div>
+        </div>
+
+        <div class="save-the-date-banner">
+          <div class="date-display">
+            <span class="day-name">SUNDAY</span>
+            <span class="date-number">13</span>
+            <span class="month-year">DECEMBER 2026</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- COUNTDOWN TIMER SECTION -->
+    <section class="section countdown-section ivory-card">
+      <h2 class="section-title"><i class="fa-solid fa-hourglass-half"></i> Countdown to the Walima</h2>
+      <div class="countdown-grid" id="countdown-timer">
+        <div class="time-card">
+          <span class="time-value" id="cd-days">00</span>
+          <span class="time-label">Days</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="cd-hours">00</span>
+          <span class="time-label">Hours</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="cd-minutes">00</span>
+          <span class="time-label">Minutes</span>
+        </div>
+        <div class="time-card">
+          <span class="time-value" id="cd-seconds">00</span>
+          <span class="time-label">Seconds</span>
+        </div>
+      </div>
+
+      <div class="calendar-actions">
+        <button id="add-google-cal" class="btn secondary-btn"><i class="fa-brands fa-google"></i> Add to Google Calendar</button>
+        <button id="download-ics-cal" class="btn secondary-btn"><i class="fa-regular fa-calendar-plus"></i> Download .ICS Calendar</button>
+      </div>
+    </section>
+
+    <!-- EVENT SCHEDULE & FUNCTIONS -->
+    <section class="section schedule-section ivory-card">
+      <h2 class="section-title"><i class="fa-solid fa-utensils"></i> Walima Program &amp; Schedule</h2>
+      <p class="section-subtitle">Join us in celebrating on Sunday, 13th December 2026</p>
+
+      <div class="events-container single-event">
+        <!-- WALIMA & RECEPTION -->
+        <div class="event-card">
+          <div class="event-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="event-details">
+            <span class="event-tag">Grand Feast &amp; Reception</span>
+            <h3 class="event-name">Walima Ceremony</h3>
+            <p class="event-time"><i class="fa-regular fa-clock"></i> <span id="reception-time-display">07:30 PM onwards</span></p>
+
+            <p class="event-desc">Join us for an auspicious dinner feast, heartfelt blessings, and celebration with family and friends at Northern Railway Club, Lucknow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUE & LOCATION SECTION -->
+    <section class="section venue-section ivory-card">
+      <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Venue &amp; Location</h2>
+      
+      <div class="venue-card">
+        <div class="venue-info">
+          <h3 class="venue-title" id="venue-title-display">Northern Railway Club</h3>
+          <p class="venue-address" id="venue-address-display">
+            <i class="fa-solid fa-map-pin"></i> Northern Railway Club, Charbagh, Lucknow, Uttar Pradesh 226001
+          </p>
+
+          <p class="venue-note">Valet parking and wheelchair accessibility available for all honored guests.</p>
+
+          <div class="venue-buttons">
+            <a href="https://maps.google.com/?q=Northern+Railway+Club+Lucknow" id="map-link-btn" target="_blank" rel="noopener noreferrer" class="btn primary-btn">
+              <i class="fa-solid fa-compass"></i> Open in Google Maps
+            </a>
+            <button id="copy-address-btn" class="btn secondary-btn">
+              <i class="fa-solid fa-copy"></i> Copy Address
+            </button>
+          </div>
+        </div>
+
+        <div class="venue-visual">
+          <div class="venue-icon-placeholder">
+            <i class="fa-solid fa-building-columns"></i>
+            <span class="venue-placeholder-title">Northern Railway Club</span>
+            <span class="venue-placeholder-city">Lucknow</span>
+          </div>
+          <div class="venue-badge"><i class="fa-solid fa-star"></i> Honored Guest Venue</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section class="section rsvp-section ivory-card" id="rsvp-section">
+      <div class="rsvp-card-wrapper">
+        <h2 class="section-title"><i class="fa-solid fa-envelope-open"></i> RSVP &amp; Attendance</h2>
+
+        <form id="rsvp-form" class="rsvp-form">
+            <div class="form-group">
+              <label for="guest-name"><i class="fa-solid fa-user"></i> Full Name *</label>
+              <input type="text" id="guest-name" required placeholder="e.g. Mr. & Mrs. Ahmed Siddiqui">
+            </div>
+
+            <div class="form-group">
+              <label for="guest-phone"><i class="fa-solid fa-phone"></i> Phone Number / Whatsapp *</label>
+              <input type="tel" id="guest-phone" required placeholder="+91 9876543210">
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-status"><i class="fa-solid fa-circle-check"></i> Will you be joining us? *</label>
+              <select id="rsvp-status" required>
+                <option value="attending" selected>Joyfully Accepts (Will Attend)</option>
+                <option value="declined">Regretfully Declines</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-count"><i class="fa-solid fa-users"></i> Number of Guests (Including you) *</label>
+              <input type="number" id="guest-count" min="1" max="10" value="1" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="dietary-req"><i class="fa-solid fa-bowl-food"></i> Meal / Dietary Requirements (100% Halal Certified)</label>
+              <select id="dietary-req">
+                <option value="Standard Halal Feast">Standard Halal Feast</option>
+                <option value="Vegetarian Only">Pure Vegetarian</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="guest-dua"><i class="fa-solid fa-hands-praying"></i> Special Dua / Message for Yusuf &amp; Sumaiya</label>
+              <textarea id="guest-dua" rows="3" placeholder="May Allah bless your union with tranquility, eternal love, and barakah..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn primary-btn submit-rsvp-btn">
+            <i class="fa-solid fa-paper-plane"></i> Submit RSVP &amp; Send Dua
+          </button>
+        </form>
+
+        <div id="rsvp-success-msg" class="success-alert hidden">
+          <i class="fa-solid fa-circle-check"></i>
+          <div>
+            <h4>JazakAllah Khair! RSVP Received.</h4>
+            <p>We are delighted to receive your confirmation and warm blessings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HADITH SECTION ON WALIMAH INVITATION -->
+    <section class="section hadith-section ivory-card">
+      <div class="khatim-corner tl">۞</div>
+      <div class="khatim-corner tr">۞</div>
+      <div class="khatim-corner bl">۞</div>
+      <div class="khatim-corner br">۞</div>
+
+      <h2 class="section-title"><i class="fa-solid fa-book-open"></i> Prophetic Guidance</h2>
+      <p class="section-subtitle">The Virtue &amp; Importance of Attending the Walimah</p>
+
+      <div class="hadith-container">
+        <div class="hadith-card">
+          <h3 class="hadith-title">1. Accepting the walimah invitation</h3>
+          
+          <div class="hadith-quote-box">
+            <p class="hadith-text">The Prophet <span class="pbuh">ﷺ</span> said:</p>
+            <blockquote class="hadith-quote">
+              “When one of you is invited to a walimah, let him attend it.”
+            </blockquote>
+            <p class="hadith-source">— Sahih al-Bukhari and Sahih Muslim</p>
+          </div>
+
+          <div class="hadith-subquote-box">
+            <p class="hadith-subtext">The wording in Sahih Muslim is:</p>
+            <blockquote class="hadith-quote secondary">
+              “If any one of you is invited to a wedding feast, he should accept it.”
+            </blockquote>
+            <div class="hadith-citation"><i class="fa-solid fa-bookmark"></i> Sahih Muslim 1429a</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER & CREDITS -->
+    <footer class="footer">
+      <div class="footer-bismillah">بَارَكَ ٱللَّٰهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا</div>
+      <p class="footer-names">Yusuf Ibraheem &amp; Syed Sumaiya</p>
+      <p class="footer-date">13th December 2026 &bull; Northern Railway Club, Lucknow</p>
+      
+      <div class="footer-controls">
+        <button id="open-couple-admin-btn" class="footer-link-btn"><i class="fa-solid fa-lock"></i> Couple's Admin Panel</button>
+        <button id="open-card-editor-btn" class="footer-link-btn"><i class="fa-solid fa-pen-to-square"></i> Customize Details</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- COUPLE ADMIN DASHBOARD MODAL -->
+  <div id="admin-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-chart-pie"></i> Couple's RSVP Admin Dashboard</h3>
+        <button class="close-modal-btn" id="close-admin-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="stats-overview">
+          <div class="stat-box">
+            <span class="stat-num" id="stat-total-responses">0</span>
+            <span class="stat-label">Total Responses</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="stat-attending-headcount">0</span>
+            <span class="stat-label">Attending Guests</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="stat-declined-count">0</span>
+            <span class="stat-label">Declined</span>
+          </div>
+        </div>
+
+        <div class="admin-actions">
+          <button id="export-csv-btn" class="btn primary-btn"><i class="fa-solid fa-file-csv"></i> Download RSVPs as CSV</button>
+          <button id="clear-data-btn" class="btn danger-btn"><i class="fa-solid fa-trash"></i> Reset Demo Data</button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Guests</th>
+                <th>Meal</th>
+                <th>Dua / Note</th>
+              </tr>
+            </thead>
+            <tbody id="admin-rsvp-table-body">
+              <!-- Inserted via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOMIZE CARD DETAILS MODAL -->
+  <div id="editor-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-sliders"></i> Customize Card Details</h3>
+        <button class="close-modal-btn" id="close-editor-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="card-editor-form" class="editor-form">
+          <div class="form-group">
+            <label for="edit-reception-time">Walima Time</label>
+            <input type="text" id="edit-reception-time" value="07:30 PM onwards">
+          </div>
+          <div class="form-group">
+            <label for="edit-venue-title">Venue Title</label>
+            <input type="text" id="edit-venue-title" value="Northern Railway Club">
+          </div>
+          <div class="form-group">
+            <label for="edit-venue-address">Venue Address</label>
+            <input type="text" id="edit-venue-address" value="Northern Railway Club, Charbagh, Lucknow, Uttar Pradesh 226001">
+          </div>
+          <div class="form-group">
+            <label for="edit-maps-link">Google Maps URL</label>
+            <input type="text" id="edit-maps-link" value="https://maps.google.com/?q=Northern+Railway+Club+Lucknow">
+          </div>
+
+          <button type="submit" class="btn primary-btn"><i class="fa-solid fa-save"></i> Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
