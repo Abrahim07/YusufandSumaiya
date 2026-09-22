@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e1427">
+  <meta name="description" content="The wedding invitation of Yusuf Ibraheem and Syed Sumaiya.">
+  <title>Yusuf & Sumaiya | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .topbar { opacity:1; }
+    .topbar .monogram { visibility:visible; }
+    .topbar nav { padding:0; border:0; background:transparent; }
+    .hero { min-height:min(800px,100vh); background:linear-gradient(180deg,#51364f 0%,#8c5b70 34%,#b87982 63%,#34213e 100%) !important; }
+    .hero::before { display:block !important; opacity:.12 !important; }
+    .hero::after { display:block !important; z-index:0 !important; top:20% !important; width:min(660px,64vw) !important; height:min(660px,64vw) !important; border:0 !important; background:radial-gradient(circle,rgba(255,215,174,.45),rgba(242,172,157,.12) 42%,transparent 70%) !important; }
+    .hero-skyline { display:none !important; }
+    .hero-pattern { display:block !important; inset:0 !important; height:100% !important; z-index:0 !important; opacity:.28 !important; background:linear-gradient(90deg,rgba(38,22,43,.65),transparent 24%,transparent 76%,rgba(38,22,43,.65)),linear-gradient(transparent 60%,rgba(25,16,34,.72)) !important; }
+    .hero-courtyard { display:block !important; z-index:0 !important; }
+    .hero-figures { display:block !important; z-index:1 !important; }
+    .hero-person { display:block !important; position:absolute !important; bottom:-2% !important; width:clamp(220px,22vw,350px) !important; height:82% !important; object-fit:contain !important; filter:drop-shadow(0 15px 14px rgba(25,14,31,.34)) saturate(.86) !important; }
+    .hero-person-groom { left:-2% !important; right:auto !important; }
+    .hero-person-bride { right:-2% !important; left:auto !important; }
+    .hero-copy { position:relative !important; z-index:3 !important; width:min(760px,62vw) !important; height:auto !important; overflow:visible !important; clip-path:none !important; white-space:normal !important; }
+    .courtyard-lattice { display:flex !important; position:absolute; z-index:1; top:8%; bottom:24%; width:clamp(36px,7vw,110px); flex-direction:column; justify-content:space-around; align-items:center; border:1px solid rgba(247,211,169,.25); background:repeating-linear-gradient(45deg,transparent 0 9px,rgba(247,211,169,.16) 10px 11px),repeating-linear-gradient(-45deg,transparent 0 9px,rgba(247,211,169,.12) 10px 11px); opacity:.75; }
+    .courtyard-lattice span { color:rgba(246,198,127,.72); font:clamp(14px,2vw,27px) 'Amiri',serif; }
+    .courtyard-lattice-left { left:clamp(16px,8vw,135px); }
+    .courtyard-lattice-right { right:clamp(16px,8vw,135px); }
+    .courtyard-medallion { position:absolute; z-index:1; top:42%; display:grid; place-items:center; width:clamp(32px,4vw,62px); aspect-ratio:1; border:1px solid rgba(246,198,127,.55); border-radius:50%; color:#edbd6c; font-size:clamp(14px,2vw,24px); box-shadow:0 0 0 7px rgba(237,189,108,.08),inset 0 0 12px rgba(237,189,108,.12); }
+    .courtyard-medallion-left { left:clamp(52px,17vw,280px); }.courtyard-medallion-right { right:clamp(52px,17vw,280px); }
+    .hero h1 { font-size:clamp(3.2rem,7vw,6.3rem) !important; color:#fff7ed !important; }
+    .hero .bismillah { color:#f0bd69 !important; }
+    .hero .ayah { color:#fff0d3 !important; }
+      .nikah-detail,.nikah-location { color:#d96f60 !important; }
+      .nikah-location { font-weight:600; }
+      .walima-detail { color:#241a2d !important; }
+    .date-card { width:min(470px,78vw); aspect-ratio:1.18 / 1; }
+    .date-underlay { flex-direction:row !important; gap:clamp(12px,3vw,28px); padding:20px; }
+    .date-event { display:flex; flex:1; min-width:0; flex-direction:column; align-items:center; justify-content:center; }
+    .date-event-name { margin-bottom:10px; color:var(--coral); font:700 10px 'Manrope',sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+    .date-event .date-month,.date-event .date-year { font-size:9px; letter-spacing:.16em; }
+    .date-event strong { margin:4px 0; font:500 clamp(3.8rem,8vw,6.2rem) / .85 'Bodoni Moda',serif; }
+    .date-event i { margin-top:9px; font:italic .8rem 'Bodoni Moda',serif; }
+    .date-divider { width:1px; height:62%; background:rgba(52,32,58,.28); }
+    @media (max-width:700px) { .date-card { width:min(350px,86vw); aspect-ratio:1 / 1.12; }.date-underlay { gap:4px; padding:10px; }.date-event-name { font-size:8px; letter-spacing:.13em; }.date-event .date-month,.date-event .date-year { font-size:7px; letter-spacing:.1em; }.date-event strong { font-size:clamp(3rem,14vw,4.8rem); }.date-event i { font-size:.7rem; }.date-divider { height:58%; } }
+    @media (max-width:700px) {
+      .hero { min-height:100svh; height:100svh; aspect-ratio:auto; }
+      .hero-person { width:48vw !important; height:59% !important; bottom:0 !important; opacity:.88; }
+      .hero-person-groom { left:-15% !important; }
+      .hero-person-bride { right:-15% !important; }
+      .hero-copy { width:100% !important; padding:70px 14px 0 !important; }
+      .hero h1 { font-size:clamp(2.3rem,10vw,4rem) !important; }
+      .courtyard-lattice { top:10%; bottom:24%; width:28px; opacity:.48; }.courtyard-lattice-left { left:4px; }.courtyard-lattice-right { right:4px; }.courtyard-medallion { width:28px; }.courtyard-medallion-left { left:38px; }.courtyard-medallion-right { right:38px; }
+      .topbar { padding:10px 12px; }
+      .topbar nav { gap:10px; padding:5px 8px; font-size:8px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="welcome-gate" id="welcomeGate" aria-labelledby="welcome-title">
+    <div class="gate-pattern" aria-hidden="true"></div>
+    <div class="gate-copy">
+      <p class="arabic gate-bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+      <p class="gate-eyebrow">You are warmly invited</p>
+      <div class="gate-scene" id="gateScene">
+        <div class="gate-vine gate-vine-left" aria-hidden="true">✿ ❀<br>❀ ✿</div>
+        <div class="gate-vine gate-vine-right" aria-hidden="true">❀ ✿<br>✿ ❀</div>
+        <div class="gate-lantern gate-lantern-left" aria-hidden="true"><span></span></div>
+        <div class="gate-lantern gate-lantern-right" aria-hidden="true"><span></span></div>
+        <button class="gate-arch" id="doorToggle" type="button" aria-label="Open wedding invitation doors" aria-pressed="false">
+          <span class="gate-arch-inner" aria-hidden="true"></span>
+          <span class="gate-doorway" aria-hidden="true">
+            <span class="gate-interior"><i>✦</i></span>
+            <span class="gate-door gate-door-left"><span class="door-panel door-panel-top"></span><span class="door-panel door-panel-bottom"></span><span class="door-handle"></span></span>
+            <span class="gate-door gate-door-right"><span class="door-panel door-panel-top"></span><span class="door-panel door-panel-bottom"></span><span class="door-handle"></span></span>
+          </span>
+          <span class="gate-threshold" aria-hidden="true">·  ·  ✦  ·  ·</span>
+        </button>
+      </div>
+      <h1 id="welcome-title"><span>Yusuf</span><em>&</em><span>Sumaiya</span></h1>
+      <p class="gate-instruction">A new chapter awaits behind these doors.</p>
+      <button class="gate-button" id="enterInvitation" type="button">Enter invitation <span>↗</span></button>
+    </div>
+  </section>
+  <div class="site-shell">
+    <audio id="weddingAudio" src="wedding-song.mp3" preload="auto" loop></audio>
+    <header class="topbar">
+      <a class="monogram" href="#invitation" aria-label="Yusuf and Sumaiya invitation">Y <span>&</span> S</a>
+      <nav aria-label="Main navigation">
+        <a href="#details">Details</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </header>
+
+    <main id="invitation">
+      <section class="hero section-frame" aria-labelledby="hero-title">
+        <div class="hero-skyline" aria-hidden="true"></div>
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-courtyard" aria-hidden="true">
+          <div class="courtyard-arch"></div>
+          <div class="courtyard-column courtyard-column-left"></div>
+          <div class="courtyard-column courtyard-column-right"></div>
+          <div class="courtyard-lattice courtyard-lattice-left"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+          <div class="courtyard-lattice courtyard-lattice-right"><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
+          <div class="courtyard-medallion courtyard-medallion-left">✦</div>
+          <div class="courtyard-medallion courtyard-medallion-right">✦</div>
+          <div class="courtyard-lantern courtyard-lantern-left"><span></span></div>
+          <div class="courtyard-lantern courtyard-lantern-right"><span></span></div>
+          <div class="courtyard-flora courtyard-flora-left">✿ ❀ ✾</div>
+          <div class="courtyard-flora courtyard-flora-right">✾ ❀ ✿</div>
+          <div class="courtyard-floor"></div>
+        </div>
+        <div class="hero-figures" aria-hidden="true">
+          <img class="hero-person hero-person-groom" src="images/groom2.png" alt="">
+          <img class="hero-person hero-person-bride" src="images/bride4.png" alt="">
+        </div>
+        <div class="hero-copy reveal">
+          <p class="arabic bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+          <p class="eyebrow">In the name of Allah, the Most Gracious, the Most Merciful</p>
+          <div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+          <p class="arabic ayah" lang="ar" dir="rtl">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
+          <p class="translation">“And We created you in pairs.”</p>
+          <p class="reference">Surah An-Naba · 78:8</p>
+          <h1 id="hero-title"><span>Yusuf</span><em>&</em><span>Sumaiya</span></h1>
+          <p class="intro">With the blessings of our families, we invite you to celebrate the beginning of our beautiful new chapter.</p>
+          <a class="scroll-cue" href="#date-reveal"><span>Open our invitation</span><strong>↓</strong></a>
+        </div>
+      </section>
+
+      <section class="date-section section-frame" id="date-reveal" aria-labelledby="date-heading">
+        <div class="section-label">A little surprise</div>
+        <div class="date-layout">
+          <div class="date-copy reveal">
+            <p class="eyebrow">Two beautiful moments</p>
+            <h2 id="date-heading">Scratch to<br><em>reveal</em></h2>
+            <p>There are two dates waiting beneath the surface. Scratch the card to uncover the celebrations.</p>
+            <button class="text-button" id="revealButton" type="button">Reveal dates <span>↗</span></button>
+          </div>
+          <div class="scratch-wrap reveal">
+            <div class="date-card" id="scratchCard">
+              <div class="date-underlay" aria-hidden="true">
+                <div class="date-event"><span class="date-event-name">Nikah</span><span class="date-month">DECEMBER</span><strong>06</strong><span class="date-year">2026</span><i>Sunday · Kanpur</i></div>
+                <div class="date-divider" aria-hidden="true"></div>
+                <div class="date-event"><span class="date-event-name">Walima</span><span class="date-month">DECEMBER</span><strong>13</strong><span class="date-year">2026</span><i>Sunday · Lucknow</i></div>
+              </div>
+              <canvas id="scratchCanvas" aria-hidden="true"></canvas>
+              <div class="date-accessible" role="status">Nikah: Sunday, 6 December 2026 in Kanpur. Walima: Sunday, 13 December 2026 at Northern Railway Club, Gulistan Colony, Lucknow.</div>
+            </div>
+            <p class="scratch-note" id="scratchNote">Scratch anywhere on the card</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="details-section section-frame" id="details" aria-labelledby="details-heading">
+        <div class="section-label">The celebration</div>
+        <div class="details-heading reveal">
+          <p class="eyebrow">Save the date</p>
+          <h2 id="details-heading">A day made<br><em>for us</em></h2>
+        </div>
+        <div class="details-grid">
+          <article class="detail-block event-card reveal"><span class="detail-number">01</span><p class="eyebrow">Sunday · 6 December 2026</p><h3>Nikah</h3><p class="event-place">Kanpur</p><p>Our marriage ceremony, surrounded by family and blessings.</p></article>
+          <article class="detail-block event-card reveal"><span class="detail-number">02</span><p class="eyebrow">Sunday · 13 December 2026</p><h3>Walima</h3><p class="event-place">Northern Railway Club</p><p>Gulistan Colony, Lucknow</p><a class="line-link" href="https://www.google.com/maps/search/?api=1&query=Northern+Railway+Club+Gulistan+Colony+Lucknow" target="_blank" rel="noreferrer">Directions <span>↗</span></a></article>
+        </div>
+        <div class="details-actions reveal"><p>We would be honoured to have you with us for both beautiful moments.</p><a class="line-link" href="wedding.ics" download>Add to calendar <span>↗</span></a></div>
+        <div class="countdown-panel reveal"><p class="eyebrow">Counting down to forever</p><div class="event-tabs" role="tablist" aria-label="Wedding events"><button class="event-tab is-selected" id="nikahTab" type="button" role="tab" aria-selected="true" aria-controls="eventCountdown" tabindex="0" data-event="nikah">Nikah</button><button class="event-tab" id="walimaTab" type="button" role="tab" aria-selected="false" aria-controls="eventCountdown" tabindex="-1" data-event="walima">Walima</button></div><div class="event-summary" aria-live="polite"><strong id="eventLabel">Nikah</strong><span id="eventVenue">Kanpur</span></div><div class="countdown" id="eventCountdown" role="tabpanel" aria-label="Countdown to Nikah"><div><strong id="days">--</strong><span>days</span></div><div><strong id="hours">--</strong><span>hours</span></div><div><strong id="minutes">--</strong><span>minutes</span></div></div><p class="countdown-note">Until our forever begins</p></div>
+        <details class="schedule reveal">
+          <summary><span>View the celebration</span><strong>+</strong></summary>
+          <div class="schedule-list">
+            <div><time>06:00 PM</time><span>Guests gather</span><small>Welcome drinks and warm greetings</small></div>
+            <div><time>07:00 PM</time><span>The celebration begins</span><small>Join us for an evening with family</small></div>
+            <div><time>08:30 PM</time><span>Dinner is served</span><small>A shared table and sweet memories</small></div>
+          </div>
+        </details>
+      </section>
+
+      <section class="quote-section section-frame" aria-label="A note from the couple">
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <blockquote>Two hearts, one promise,<br>and a lifetime to share.</blockquote>
+        <p class="arabic quote-arabic" lang="ar" dir="rtl">بَارَكَ اللَّهُ لَنَا وَبَارَكَ عَلَيْنَا</p>
+        <p class="eyebrow">May Allah bless us and bless our union</p>
+      </section>
+
+      <section class="rsvp-section section-frame" id="rsvp" aria-labelledby="rsvp-heading">
+        <div class="rsvp-intro reveal"><p class="eyebrow">Join us</p><h2 id="rsvp-heading">Will you be<br><em>with us?</em></h2><p>Please let us know if you can share this special day with us. Your presence is our greatest gift.</p></div>
+        <form class="rsvp-form reveal" id="rsvpForm">
+          <label for="guestName">Your name<input id="guestName" name="guestName" type="text" autocomplete="name" placeholder="Enter your name" required></label>
+          <fieldset><legend>Will you be joining us?</legend><div class="choice-row"><label class="choice"><input type="radio" name="attendance" value="Joyfully attending" required><span>Joyfully attending</span></label><label class="choice"><input type="radio" name="attendance" value="Regretfully declining"><span>Regretfully declining</span></label></div></fieldset>
+          <label for="meal" id="mealField" hidden>Meal preference<select id="meal" name="meal"><option value="Not specified">Select an option</option><option>Vegetarian</option><option>Non-vegetarian</option></select></label>
+          <label for="message">A note for us <textarea id="message" name="message" rows="3" placeholder="Share a wish or message (optional)"></textarea></label>
+          <button class="primary-button" type="submit">Send RSVP <span>↗</span></button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer section-frame"><p class="arabic" lang="ar" dir="rtl">الحمد لله</p><p>With love, Yusuf & Sumaiya</p><span>13 · 12 · 26</span></footer>
+  </div>
+  <script src="script.js?v=2"></script>
+</body>
+</html>

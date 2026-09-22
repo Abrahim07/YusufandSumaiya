@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Yusuf and Sumaiya//Wedding Invitation//EN
+BEGIN:VEVENT
+UID:yusuf-sumaiya-wedding-2026@example.com
+DTSTAMP:20260915T000000Z
+DTSTART;TZID=Asia/Kolkata:20261213T180000
+DTEND;TZID=Asia/Kolkata:20261213T220000
+SUMMARY:Yusuf & Sumaiya's Wedding
+LOCATION:Northern Railway Club, Gulistan Colony, Lucknow
+DESCRIPTION:With the blessings of our families, we invite you to celebrate with us.
+END:VEVENT
+END:VCALENDAR
